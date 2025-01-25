@@ -158,13 +158,9 @@ public:
 
             data_ = static_cast<std::uint8_t*>(reallocedData);
             maxSize_ = allocatedSize;
-            currSize_ = requiredSizeMin;
         }
-        else
-        {
-            std::memcpy(data_ + currSize_, src, size);
-            currSize_ += size;
-        }
+        std::memcpy(data_ + currSize_, src, size);
+        currSize_ += size;
     }
 
     void reserve(std::uint64_t size)

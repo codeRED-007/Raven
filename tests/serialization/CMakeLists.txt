@@ -18,3 +18,8 @@ add_executable(stest4 serialize_server_setup_message.cpp)
 target_include_directories(stest4 PUBLIC ${RAVEN_INCLUDE_DIR})
 target_include_directories(stest4 PUBLIC ${MSQUIC_INCLUDE_DIR} ${MOODY_CAMEL_INCLUDE_DIR} ${PROTOBUF_MESSAGES_INCLUDE_DIR})
 target_link_libraries(stest4 PUBLIC raven)
+
+add_executable(stest5 serialize_subscribe_update_message.cpp)
+target_include_directories(stest5 PUBLIC ${RAVEN_INCLUDE_DIR})
+target_include_directories(stest5 PUBLIC ${MSQUIC_INCLUDE_DIR} ${MOODY_CAMEL_INCLUDE_DIR} ${PROTOBUF_MESSAGES_INCLUDE_DIR})
+target_link_libraries(stest5 PUBLIC raven)
